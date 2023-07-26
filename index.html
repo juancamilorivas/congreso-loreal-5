@@ -12,10 +12,24 @@
       crossorigin="anonymous"
     />
     <style>
+      @font-face {
+        font-family: "LOREAL-Essentielle-Bold.ttf";
+        src: url("./font/LOREAL-Essentielle-Bold.ttf") format("opentype");
+        /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
+        src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
+      }
+
+      @font-face {
+        font-family: "LOREAL-Essentielle-Regular";
+        src: url("./font/LOREAL-Essentielle-Regular.ttf") format("opentype");
+        /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
+        src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
+      }
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+
       }
 
       body {
@@ -24,6 +38,13 @@
         align-items: center;
         background-color: #f7f7f7;
         padding: 10px;
+        background: rgb(245, 245, 245);
+        background: radial-gradient(
+          circle,
+          rgba(245, 245, 245, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+          );
+          font-family: "LOREAL-Essentielle-Regular";
       }
 
       .main-container {
@@ -32,19 +53,15 @@
         border: 1px solid #ccc;
         border-radius: 10px;
         background-color: #ffffff;
+        box-shadow: 0px 5px 15px rgba(120, 78, 175, 0.25);
       }
 
       .titulo {
         text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 16px;
+        font-size: 18px;
+        font-family: "LOREAL-Essentielle-Bold.ttf";
       }
 
-      .subtitulo {
-        text-align: center;
-        font-size: 18px;
-      }
       .margin-small {
         margin-right: 20px;
       }
@@ -57,6 +74,7 @@
       }
 
       .image-banner {
+        border-radius: 10px;
         width: 100%; /* Hace que la imagen tenga un 100% de ancho y ocupe todo el ancho del div */
       }
 
@@ -162,7 +180,7 @@
         </div>
       </div>
 
-      <h2 class="subtitulo">
+      <h2 class="titulo mb-4">
         Regístrate, haz parte de la comunidad médica de L'Oréal y recibe en
         primicia noticias, próximos congresos y lanzamientos de productos
       </h2>
@@ -348,7 +366,7 @@
         </div>
 
         <button class="ov-btn-slide-left" type="submit">
-          SUSCRIBETE AL BOLETIN
+          SUSCRÍBETE AL BOLETÍN
         </button>
       </form>
     </div>
